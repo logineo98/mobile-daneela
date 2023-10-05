@@ -30,7 +30,7 @@ const PolitiqueUtilisation: FC<COMPONENT_TYPE> = (props) => {
 const styles = StyleSheet.create({
     politique_utilisation_container: { flexGrow: 1, backgroundColor: colors.bg_color },
 
-    title: { color: colors.black, fontSize: 20, fontWeight: '600', textAlign: 'center', },
+    title: { color: colors.black, fontSize: 20, fontWeight: '600', textAlign: 'center', marginTop: 10, },
 
     list_politique_utilisation_container: { padding: 10 },
 })
