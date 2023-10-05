@@ -21,7 +21,7 @@ const Loading: FC<COMPONENT_TYPE> = (props) => {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, alignItems: 'center', justifyContent: 'center' }
+    container: { flex: 1, backgroundColor: colors.bg_color, alignItems: 'center', justifyContent: 'center' }
 })
 
 

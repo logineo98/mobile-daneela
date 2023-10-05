@@ -3,6 +3,8 @@ export const images = {
     logo_white: require('../assets/images/logo_white.png'),
     certificated: require('../assets/images/certificated.png'),
     vitepay_logo: require('../assets/images/vitepay_logo.png'),
+    avant: require('../assets/images/avant.png'),
+    arriere: require('../assets/images/arriere.jpg'),
 }
 
 export const colors = {
@@ -13,6 +15,7 @@ export const colors = {
     white: '#FFFFFF',
     black: '#000000',
     tomato: '#FF5851',
+    light_gray: '#AFAFAF',
 }
 
 export const categories = [

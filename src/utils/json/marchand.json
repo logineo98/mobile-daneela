@@ -1,0 +1,12 @@
+{
+    "marchand_certificated": {
+        "title": "Marchands Certifiés",
+        "text1": "Un marchand certifié est un marchand ayant un badge et répondant à certains critères.",
+        "text2": "Le badge est un véritable atout car il sert à rassurer l’utilisateur sur la fiabilité du marchand."
+    },
+    "marchand_vitepay": {
+        "title": "Marchands Vitepay",
+        "text1": "Vitepay est un service de paiement électronique sécurisé.",
+        "text2": "Un marchand vitepay est un marchand sur le site duquel il est possible d’effectuer des paiements Orange Money à travers Vitepay."
+    }
+}
