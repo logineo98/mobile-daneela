@@ -5,6 +5,11 @@ export const images = {
     vitepay_logo: require('../assets/images/vitepay_logo.png'),
     avant: require('../assets/images/avant.png'),
     arriere: require('../assets/images/arriere.jpg'),
+    alimentation: require('../assets/images/alimentation.jpg'),
+    electronique: require('../assets/images/electronique.jpg'),
+    fashion: require('../assets/images/fashion.jpg'),
+    restauration: require('../assets/images/restauration.jpg'),
+    supermarche: require('../assets/images/supermarche.jpg'),
 }
 
 export const colors = {
@@ -16,6 +21,9 @@ export const colors = {
     black: '#000000',
     tomato: '#FF5851',
     light_gray: '#AFAFAF',
+    facebook_color: '#077AE9',
+    instagram_color: '#DC4D5A',
+    linkedin_color: '#0274B3',
 }
 
 export const categories = [

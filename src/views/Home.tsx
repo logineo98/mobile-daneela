@@ -1,4 +1,4 @@
-import { Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { FC, useCallback, useState } from 'react'
 import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript/src/types'
 // my importations
@@ -8,8 +8,10 @@ import ScreenContainer from '../components/common/ScreenContainer'
 import MarchandModal from '../components/common/MarchandModal'
 import { marchand_certificated, marchand_vitepay } from '../utils/json/marchand.json'
 import Slider from '../components/common/Slider'
+import { categories_populaires } from '../utils/json/categorie_populaire.json'
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import CategoryPopularCard from '../components/cards/CategoryPopularCard'
 
 type COMPONENT_TYPE = {
     navigation: DrawerNavigationHelpers,
@@ -21,6 +23,7 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
     const [refreshing, setRefreshing] = useState(false)
     const [visibleCertificated, setVisibleCertificated] = useState(false)
     const [visibleVitepay, setVisibleVitepay] = useState(false)
+    const [clickName, setClickName] = useState('Alimentation')
 
     const onRefresh = useCallback(() => {
         setRefreshing(true)
@@ -53,6 +56,19 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
 
                     <Slider navigation={navigation} />
 
+                    <View style={styles.categories_populaires_title_container}>
+                        <Text style={styles.categories_populaires_title}>Catégories Populaires</Text>
+
+                        <FlatList
+                            data={categories_populaires}
+                            renderItem={({ item }) => <CategoryPopularCard data={item} clickName={clickName} setClickName={setClickName} />}
+                            keyExtractor={item => item.id}
+                            horizontal={true}
+                            showsHorizontalScrollIndicator={false}
+                            contentContainerStyle={styles.categories_populaires_container}
+                        />
+                    </View>
+
 
                 </View>
             </ScreenContainer>
@@ -68,6 +84,10 @@ const styles = StyleSheet.create({
     marchand_text_info_icon_container: { marginLeft: 5, },
     marchand_text_info_icon: {},
 
+    // categories populaires
+    categories_populaires_title_container: {},
+    categories_populaires_title: { color: colors.black, fontSize: 20, fontWeight: '600', },
+    categories_populaires_container: { marginVertical: 10, alignItems: 'center', },
 })
 
 export default Home

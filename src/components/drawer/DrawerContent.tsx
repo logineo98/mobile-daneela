@@ -4,7 +4,7 @@ import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript
 
 // my importations
 import { categories, colors } from '../../utils/constants'
-import CategorieCard from '../cards/CategorieCard'
+import CategoryCard from '../cards/CategoryCard'
 
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
@@ -35,7 +35,7 @@ const DrawerCustomer: FC<COMPONENT_TYPE> = (props) => {
 
             <FlatList
                 data={categories}
-                renderItem={({ item }) => <CategorieCard data={item} navigation={navigation} />}
+                renderItem={({ item }) => <CategoryCard data={item} navigation={navigation} />}
                 keyExtractor={item => item.id}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.sub_menu_container}

@@ -12,7 +12,7 @@ type COMPONENT_TYPE = {
     },
     navigation?: DrawerNavigationHelpers,
 }
-const CategorieCard: FC<COMPONENT_TYPE> = (props) => {
+const CategoryCard: FC<COMPONENT_TYPE> = (props) => {
     const { data, navigation } = props
     const { id, name } = data
 
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     sub_menu_name: { color: colors.white, fontSize: 16 },
 })
 
-export default CategorieCard
+export default CategoryCard

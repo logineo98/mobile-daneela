@@ -8,6 +8,8 @@ import Loading from '../components/common/Loading'
 // my icons
 import Feather from 'react-native-vector-icons/Feather'
 import Fontisto from 'react-native-vector-icons/Fontisto'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 
 type COMPONENT_TYPE = {
     navigation: DrawerNavigationHelpers,
@@ -93,11 +95,11 @@ const Detail: FC<COMPONENT_TYPE> = (props) => {
                                     <View style={styles.menu_content_apercu}>
                                         <View style={styles.phone_web_site_container}>
                                             <TouchableOpacity activeOpacity={0.5} style={styles.icon_name_container}>
-                                                <Feather name='phone-call' color={colors.black} size={35} style={styles.phone_web_site_icon} />
+                                                <Feather name='phone-call' color={colors.black} size={25} style={styles.phone_web_site_icon} />
                                                 <Text style={styles.phone_web_site_name}>APPELER</Text>
                                             </TouchableOpacity>
                                             <TouchableOpacity activeOpacity={0.5} style={styles.icon_name_container}>
-                                                <Fontisto name='world-o' color={colors.black} size={35} style={styles.phone_web_site_icon} />
+                                                <Fontisto name='world-o' color={colors.black} size={25} style={styles.phone_web_site_icon} />
                                                 <Text style={styles.phone_web_site_name}>SITE WEB</Text>
                                             </TouchableOpacity>
                                         </View>
@@ -114,6 +116,101 @@ const Detail: FC<COMPONENT_TYPE> = (props) => {
                                                 <View style={[styles.featured_product_image_container, { height: width < 640 ? 120 : 160 }]}>
                                                     <Image source={images.arriere} style={styles.featured_product_image} />
                                                 </View>
+                                            </View>
+                                        </View>
+                                    </View>
+                                }
+
+                                {menu.avis &&
+                                    <View style={styles.menu_content_avis}>
+
+                                    </View>
+                                }
+
+                                {menu.proposition &&
+                                    <View style={styles.menu_content_proposition}>
+                                        {/* service supplémentaire */}
+                                        <View style={styles.proposition_content_title_container}>
+                                            <Text style={styles.proposition_content_title}>Services supplémentaires</Text>
+                                            <View style={styles.proposition_content_container}>
+                                                <Text style={styles.proposition_content_container_title}>Livraison à domicile : </Text>
+                                                <Text style={styles.proposition_content_container_value}>Payante</Text>
+                                            </View>
+                                            <View style={styles.proposition_content_container}>
+                                                <Text style={styles.proposition_content_container_title}>Service après vente : </Text>
+                                                <Text style={styles.proposition_content_container_value}>Oui</Text>
+                                            </View>
+                                        </View>
+                                        {/* fourchette de prix */}
+                                        <View style={styles.proposition_content_title_container}>
+                                            <Text style={styles.proposition_content_title}>Fourchette de prix</Text>
+                                            <View style={styles.proposition_content_container}>
+                                                <Text style={styles.proposition_content_container_title}>Minimum : </Text>
+                                                <Text style={styles.proposition_content_container_value}>1000</Text>
+                                            </View>
+                                            <View style={styles.proposition_content_container}>
+                                                <Text style={styles.proposition_content_container_title}>Maximum : </Text>
+                                                <Text style={styles.proposition_content_container_value}>100000</Text>
+                                            </View>
+                                        </View>
+                                        {/* categories */}
+                                        <View style={styles.proposition_content_title_container}>
+                                            <Text style={styles.proposition_content_title}>Catégories</Text>
+                                            <View style={styles.proposition_content_categories_container}>
+                                                <Text style={styles.proposition_content_categorie}>Alimentation</Text>
+                                                <Text style={styles.proposition_content_categorie}>Immobilier/Déco</Text>
+                                                <Text style={styles.proposition_content_categorie}>Supermarché</Text>
+                                                <Text style={styles.proposition_content_categorie}>Jeu</Text>
+                                                <Text style={styles.proposition_content_categorie}>Sport</Text>
+                                                <Text style={styles.proposition_content_categorie}>Restaurations</Text>
+                                                <Text style={styles.proposition_content_categorie}>Fashion</Text>
+                                            </View>
+                                        </View>
+                                        {/* sous-categories */}
+                                        <View style={styles.proposition_content_title_container}>
+                                            <Text style={styles.proposition_content_title}>Sous catégories</Text>
+                                            <View style={styles.proposition_content_categories_container}>
+                                                <Text style={styles.proposition_content_categorie}>Produit laitier</Text>
+                                                <Text style={styles.proposition_content_categorie}>Boites de conserve</Text>
+                                                <Text style={styles.proposition_content_categorie}>Céreale</Text>
+                                                <Text style={styles.proposition_content_categorie}>Pommade</Text>
+                                                <Text style={styles.proposition_content_categorie}>Parfum</Text>
+                                                <Text style={styles.proposition_content_categorie}>Bricolages électronique</Text>
+                                                <Text style={styles.proposition_content_categorie}>Plats Africain </Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                }
+
+                                {menu.about &&
+                                    <View style={styles.menu_content_about}>
+                                        <View style={styles.about_content_icon_info_container}>
+                                            <View style={styles.about_content_icon_info}>
+                                                <MaterialIcons name='info' color={colors.black} size={16} style={styles.about_content_icon} />
+                                                <Text style={styles.about_content_info}>Vente electronique</Text>
+                                            </View>
+                                            <View style={styles.about_content_icon_info}>
+                                                <MaterialIcons name='phone-enabled' color={colors.black} size={16} style={styles.about_content_icon} />
+                                                <Text style={styles.about_content_info}>+223 78012828</Text>
+                                            </View>
+                                            <View style={styles.about_content_icon_info}>
+                                                <MaterialIcons name='email' color={colors.black} size={16} style={styles.about_content_icon} />
+                                                <Text style={styles.about_content_info}>saggato@gmail.com</Text>
+                                            </View>
+                                        </View>
+
+                                        <View style={styles.about_content_social_link_title_container}>
+                                            <Text style={styles.about_content_social_link_title}>Lien Reseaux Sociaux</Text>
+                                            <View style={styles.about_content_social_link_container}>
+                                                <TouchableOpacity activeOpacity={0.5} style={[styles.about_content_social_link, { backgroundColor: colors.facebook_color }]}>
+                                                    <Feather name='facebook' color={colors.white} size={20} style={styles.about_content_social_link_icon} />
+                                                </TouchableOpacity>
+                                                <TouchableOpacity activeOpacity={0.5} style={[styles.about_content_social_link, { backgroundColor: colors.instagram_color }]}>
+                                                    <AntDesign name='instagram' color={colors.white} size={20} style={styles.about_content_social_link_icon} />
+                                                </TouchableOpacity>
+                                                <TouchableOpacity activeOpacity={0.5} style={[styles.about_content_social_link, { backgroundColor: colors.linkedin_color }]}>
+                                                    <Feather name='linkedin' color={colors.white} size={20} style={styles.about_content_social_link_icon} />
+                                                </TouchableOpacity>
                                             </View>
                                         </View>
                                     </View>
@@ -159,12 +256,34 @@ const styles = StyleSheet.create({
     icon_name_container: { alignItems: 'center', },
     phone_web_site_icon: {},
     phone_web_site_name: { color: colors.black, },
-
     featured_product_container: { padding: 10, },
     featured_product_title: { color: colors.black, fontSize: 16, fontWeight: '600', marginBottom: 10, },
     featured_product_images_container: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', },
     featured_product_image_container: { width: '32%' },
     featured_product_image: { height: '100%', width: '100%', resizeMode: 'cover', },
+    // avis
+    menu_content_avis: {},
+    // proposition
+    menu_content_proposition: { padding: 10, },
+    proposition_content_title_container: {},
+    proposition_content_title: { color: colors.black, fontSize: 16, fontWeight: '600', marginBottom: 5, },
+    proposition_content_container: { flexDirection: 'row', alignItems: 'center', marginBottom: 5, },
+    proposition_content_container_title: { color: colors.black, },
+    proposition_content_container_value: { color: colors.light_gray, fontSize: 13, },
+    proposition_content_categories_container: { flexDirection: 'row', alignItems: 'center', flexWrap: 'wrap', padding: 10, borderWidth: 1, borderColor: colors.light_gray, borderRadius: 10, marginBottom: 5, },
+    proposition_content_categorie: { backgroundColor: colors.tomato, color: colors.white, fontSize: 13, paddingVertical: 5, paddingHorizontal: 10, borderRadius: 15, marginRight: 5, marginBottom: 5, },
+    // about
+    menu_content_about: {},
+    about_content_icon_info_container: { borderBottomWidth: 1, borderBottomColor: colors.light_gray, padding: 10, paddingBottom: 5, },
+    about_content_icon_info: { flexDirection: 'row', alignItems: 'center', marginBottom: 10, },
+    about_content_icon: {},
+    about_content_info: { marginLeft: 5, color: colors.black, fontSize: 13, },
+    about_content_social_link_title_container: { padding: 10, },
+    about_content_social_link_title: { color: colors.black, fontSize: 16, fontWeight: '600', marginBottom: 10, },
+    about_content_social_link_container: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', },
+    about_content_social_link: { padding: 15, borderRadius: 50, },
+    about_content_social_link_icon: {},
+
 })
 
 export default Detail

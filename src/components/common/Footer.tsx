@@ -14,9 +14,9 @@ const Footer: FC<COMPONENT_TYPE> = (props) => {
 
     return (
         <View style={styles.footer_container}>
-            <View style={styles.logo_white_container}>
+            <TouchableOpacity activeOpacity={0.5} style={styles.logo_white_container} onPress={() => navigation.navigate('home')}>
                 <Image source={images.logo_white} style={styles.logo_white} />
-            </View>
+            </TouchableOpacity>
             <View style={styles.copyright_logineo_year_container}>
                 <Text style={styles.copyright}>@Copyright | </Text>
                 <TouchableOpacity activeOpacity={0.5}>
