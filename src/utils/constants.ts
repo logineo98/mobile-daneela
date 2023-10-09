@@ -10,6 +10,8 @@ export const images = {
     fashion: require('../assets/images/fashion.jpg'),
     restauration: require('../assets/images/restauration.jpg'),
     supermarche: require('../assets/images/supermarche.jpg'),
+    erease_filter: require('../assets/images/erease_filter.png'),
+
 }
 
 export const colors = {

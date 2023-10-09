@@ -1,0 +1,16 @@
+{
+    "search_by": [
+        {
+            "key": "1",
+            "value": "Article"
+        },
+        {
+            "key": "2",
+            "value": "Type d'article"
+        },
+        {
+            "key": "3",
+            "value": "Marchand"
+        }
+    ]
+}

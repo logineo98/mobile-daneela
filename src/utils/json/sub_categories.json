@@ -1,0 +1,690 @@
+[
+    {
+        "key": "1_1",
+        "value": "Produit laitier"
+    },
+    {
+        "key": "1_2",
+        "value": "Céreale"
+    },
+    {
+        "key": "1_3",
+        "value": "Boites de conserve"
+    },
+    {
+        "key": "1_4",
+        "value": "Eau et Boisson"
+    },
+    {
+        "key": "1_5",
+        "value": "Épice"
+    },
+    {
+        "key": "1_6",
+        "value": "Huile"
+    },
+    {
+        "key": "1_7",
+        "value": "Légumes frai"
+    },
+    {
+        "key": "1_8",
+        "value": "Charcuterie"
+    },
+    {
+        "key": "1_9",
+        "value": "Fruit"
+    },
+    {
+        "key": "2_1",
+        "value": "Chemise"
+    },
+    {
+        "key": "2_2",
+        "value": "Pantalon"
+    },
+    {
+        "key": "2_3",
+        "value": "T-Shirt"
+    },
+    {
+        "key": "2_4",
+        "value": "Culotte"
+    },
+    {
+        "key": "2_5",
+        "value": "Chaussure"
+    },
+    {
+        "key": "2_6",
+        "value": "Montres et  bracelet"
+    },
+    {
+        "key": "2_7",
+        "value": "Veste"
+    },
+    {
+        "key": "2_8",
+        "value": "Lunette"
+    },
+    {
+        "key": "2_9",
+        "value": "wax"
+    },
+    {
+        "key": "2_10",
+        "value": "Bazin"
+    },
+    {
+        "key": "2_11",
+        "value": "Tissu"
+    },
+    {
+        "key": "2_12",
+        "value": "Brodé"
+    },
+    {
+        "key": "3_1",
+        "value": "Parfum"
+    },
+    {
+        "key": "3_2",
+        "value": "Pommade"
+    },
+    {
+        "key": "3_3",
+        "value": "Vernis"
+    },
+    {
+        "key": "3_4",
+        "value": "Crayon"
+    },
+    {
+        "key": "3_5",
+        "value": "Faux ongle"
+    },
+    {
+        "key": "3_6",
+        "value": "Déodorant"
+    },
+    {
+        "key": "3_7",
+        "value": "Gels de douche"
+    },
+    {
+        "key": "3_8",
+        "value": "Lentille"
+    },
+    {
+        "key": "3_9",
+        "value": "Masque de visage"
+    },
+    {
+        "key": "3_10",
+        "value": "Mèche"
+    },
+    {
+        "key": "3_11",
+        "value": "Crème à lèvre "
+    },
+    {
+        "key": "3_12",
+        "value": "Maquillage"
+    },
+    {
+        "key": "3_13",
+        "value": "Produit bio"
+    },
+    {
+        "key": "4_1",
+        "value": "Hôtels de luxe"
+    },
+    {
+        "key": "4_2",
+        "value": "Hôtels pas cher"
+    },
+    {
+        "key": "4_3",
+        "value": "Hôtels à bas prix "
+    },
+    {
+        "key": "5_1",
+        "value": "Téléphone mobile"
+    },
+    {
+        "key": "5_2",
+        "value": "Téléphone Fixe"
+    },
+    {
+        "key": "5_3",
+        "value": "Gadget"
+    },
+    {
+        "key": "5_4",
+        "value": "Électroménager"
+    },
+    {
+        "key": "5_5",
+        "value": "Pièces de rechange"
+    },
+    {
+        "key": "5_6",
+        "value": "Bricolages électronique"
+    },
+    {
+        "key": "5_7",
+        "value": "Marques populaires"
+    },
+    {
+        "key": "5_8",
+        "value": "Accessoires de téléphone"
+    },
+    {
+        "key": "5_9",
+        "value": "Coques et étuis populaires"
+    },
+    {
+        "key": "5_10",
+        "value": "Accessoires recommandés"
+    },
+    {
+        "key": "5_11",
+        "value": "Pièces de téléphone"
+    },
+    {
+        "key": "5_12",
+        "value": "Equipements"
+    },
+    {
+        "key": "5_13",
+        "value": "Composants et peripheriques"
+    },
+    {
+        "key": "5_14",
+        "value": "Ordinateurs portables"
+    },
+    {
+        "key": "5_15",
+        "value": "Sécurité et protection"
+    },
+    {
+        "key": "5_16",
+        "value": "Périphériques de stockage"
+    },
+    {
+        "key": "5_17",
+        "value": "Electronique de bureau"
+    },
+    {
+        "key": "5_18",
+        "value": "Réseaux"
+    },
+    {
+        "key": "5_19",
+        "value": "Accessoires et pièces"
+    },
+    {
+        "key": "5_20",
+        "value": "Audio et vidéo"
+    },
+    {
+        "key": "5_21",
+        "value": "Caméra et photo"
+    },
+    {
+        "key": "5_22",
+        "value": "Audio et vidéo portable"
+    },
+    {
+        "key": "5_23",
+        "value": "Electronique connectée"
+    },
+    {
+        "key": "5_24",
+        "value": "Jeux vidéo"
+    },
+    {
+        "key": "6_1",
+        "value": "Vol"
+    },
+    {
+        "key": "6_2",
+        "value": "Train"
+    },
+    {
+        "key": "6_3",
+        "value": "Bus"
+    },
+    {
+        "key": "6_4",
+        "value": "Livraison"
+    },
+    {
+        "key": "6_5",
+        "value": "Loterie"
+    },
+    {
+        "key": "6_6",
+        "value": "Cérémonie"
+    },
+    {
+        "key": "6_7",
+        "value": "Concert"
+    },
+    {
+        "key": "7_1",
+        "value": "Villa"
+    },
+    {
+        "key": "7_2",
+        "value": "Immeuble"
+    },
+    {
+        "key": "7_3",
+        "value": "Appartement"
+    },
+    {
+        "key": "7_4",
+        "value": "Boutique"
+    },
+    {
+        "key": "7_6",
+        "value": "Terrain"
+    },
+    {
+        "key": "7_7",
+        "value": "Meubles de maison"
+    },
+    {
+        "key": "7_8",
+        "value": "Meubles de bureau"
+    },
+    {
+        "key": "7_9",
+        "value": "Arts, création et couture"
+    },
+    {
+        "key": "7_10",
+        "value": "Décoration "
+    },
+    {
+        "key": "7_11",
+        "value": "Textiles de maison"
+    },
+    {
+        "key": "7_12",
+        "value": "Célébrations"
+    },
+    {
+        "key": "7_13",
+        "value": "Rangement"
+    },
+    {
+        "key": "7_14",
+        "value": "Articles de maison"
+    },
+    {
+        "key": "7_15",
+        "value": "Cuisine"
+    },
+    {
+        "key": "7_16",
+        "value": "Jardin et animaux"
+    },
+    {
+        "key": "8_1",
+        "value": "Enfant"
+    },
+    {
+        "key": "8_2",
+        "value": "Adolescent"
+    },
+    {
+        "key": "8_3",
+        "value": "Adulte"
+    },
+    {
+        "key": "9_1",
+        "value": "Équipements de sport"
+    },
+    {
+        "key": "9_2",
+        "value": "Natation"
+    },
+    {
+        "key": "9_3",
+        "value": "Cylisme"
+    },
+    {
+        "key": "9_4",
+        "value": "Baskets"
+    },
+    {
+        "key": "9_5",
+        "value": "Peche"
+    },
+    {
+        "key": "9_6",
+        "value": "Tenues de sport"
+    },
+    {
+        "key": "10_1",
+        "value": "Alimentaire"
+    },
+    {
+        "key": "10_2",
+        "value": "Fashion"
+    },
+    {
+        "key": "10_3",
+        "value": "Cosmétique"
+    },
+    {
+        "key": "10_4",
+        "value": "Électronique"
+    },
+    {
+        "key": "10_5",
+        "value": "Hygiène domestique"
+    },
+    {
+        "key": "10_6",
+        "value": "Sport"
+    },
+    {
+        "key": "10_7",
+        "value": "Jeu"
+    },
+    {
+        "key": "11_1",
+        "value": "Plats Africain "
+    },
+    {
+        "key": "11_2",
+        "value": "Fast-food"
+    },
+    {
+        "key": "12_1",
+        "value": "Matériaux de médecine"
+    },
+    {
+        "key": "13_1",
+        "value": "Outillage à main"
+    },
+    {
+        "key": "13_2",
+        "value": "Outillage du plombier"
+    },
+    {
+        "key": "13_3",
+        "value": "Electroportatifs"
+    },
+    {
+        "key": "13_4",
+        "value": "Nettoyeur haute pression et aspirateur"
+    },
+    {
+        "key": "14_1",
+        "value": "Location"
+    },
+    {
+        "key": "14_2",
+        "value": "Vente"
+    },
+    {
+        "key": "15_1",
+        "value": "Fournisseurs d’accès internet"
+    },
+    {
+        "key": "16_1",
+        "value": "Hébergement web"
+    },
+    {
+        "key": "16_2",
+        "value": "Logiciel"
+    },
+    {
+        "key": "16_3",
+        "value": "E-marketing "
+    },
+    {
+        "key": "16_4",
+        "value": "Design & Multimedia"
+    },
+    {
+        "key": "17_1",
+        "value": "Musique"
+    },
+    {
+        "key": "18_1",
+        "value": "Apprenant"
+    },
+    {
+        "key": "18_2",
+        "value": "Entreprise"
+    },
+    {
+        "key": "18_3",
+        "value": "Université"
+    },
+    {
+        "key": "19_1",
+        "value": "Céréale"
+    },
+    {
+        "key": "20_1",
+        "value": "Colis"
+    },
+    {
+        "key": "21_1",
+        "value": "Mode Femme"
+    },
+    {
+        "key": "21_2",
+        "value": "Maillots de bains"
+    },
+    {
+        "key": "21_3",
+        "value": "Mode musulmane"
+    },
+    {
+        "key": "21_4",
+        "value": "Bas"
+    },
+    {
+        "key": "21_5",
+        "value": "Mode grand taille"
+    },
+    {
+        "key": "21_6",
+        "value": "Mariages et évenements"
+    },
+    {
+        "key": "21_7",
+        "value": "Lingerie"
+    },
+    {
+        "key": "21_8",
+        "value": "Accessoires"
+    },
+    {
+        "key": "22_4",
+        "value": "Bas"
+    },
+    {
+        "key": "22_8",
+        "value": "Accessoires"
+    },
+    {
+        "key": "22_1",
+        "value": "Manteaux et Vestes"
+    },
+    {
+        "key": "22_2",
+        "value": "Sous vetements"
+    },
+    {
+        "key": "22_3",
+        "value": "Nouveautés et insolites"
+    },
+    {
+        "key": "23_1",
+        "value": "Bijouterie fine"
+    },
+    {
+        "key": "23_2",
+        "value": "Mariage et fiancailles"
+    },
+    {
+        "key": "23_3",
+        "value": "Montres homme "
+    },
+    {
+        "key": "23_4",
+        "value": "Montres femme"
+    },
+    {
+        "key": "23_5",
+        "value": "Bijoux à la mode"
+    },
+    {
+        "key": "23_6",
+        "value": "Perles et bijouterie artisanal"
+    },
+    {
+        "key": "24_1",
+        "value": "Bagages et sacs femme"
+    },
+    {
+        "key": "24_2",
+        "value": "Chaussures femme"
+    },
+    {
+        "key": "24_3",
+        "value": "Bagages et sacs homme"
+    },
+    {
+        "key": "24_4",
+        "value": "Chaussures homme"
+    },
+    {
+        "key": "24_5",
+        "value": "Autres sacs et accessoires"
+    },
+    {
+        "key": "24_6",
+        "value": "Chaussures populaires"
+    },
+    {
+        "key": "25_1",
+        "value": "Catégories populaires"
+    },
+    {
+        "key": "25_2",
+        "value": "Bébé (0 à 3 ans)"
+    },
+    {
+        "key": "25_3",
+        "value": "Fille"
+    },
+    {
+        "key": "25_4",
+        "value": "Garçon"
+    },
+    {
+        "key": "25_5",
+        "value": "Maternité et bébé"
+    },
+    {
+        "key": "25_6",
+        "value": "Jouets de construction"
+    },
+    {
+        "key": "25_7",
+        "value": "Jouets et loisirs"
+    },
+    {
+        "key": "26_1",
+        "value": "Mèches"
+    },
+    {
+        "key": "26_2",
+        "value": "Perruques"
+    },
+    {
+        "key": "26_3",
+        "value": "Cheveux synthétiques"
+    },
+    {
+        "key": "26_4",
+        "value": "Maquillage"
+    },
+    {
+        "key": "26_5",
+        "value": "Santé"
+    },
+    {
+        "key": "26_6",
+        "value": "Soins pour la peau "
+    },
+    {
+        "key": "26_7",
+        "value": "Manucure"
+    },
+    {
+        "key": "26_8",
+        "value": "Soins personnels"
+    },
+    {
+        "key": "26_9",
+        "value": "Massage et relaxation"
+    },
+    {
+        "key": "26_10",
+        "value": "Articles pour adultes"
+    },
+    {
+        "key": "27_1",
+        "value": "Pièces pour voiture"
+    },
+    {
+        "key": "27_2",
+        "value": "Outils et entretien"
+    },
+    {
+        "key": "27_3",
+        "value": "Electronique embarquée"
+    },
+    {
+        "key": "27_4",
+        "value": "Accessoirs d'exterieur"
+    },
+    {
+        "key": "27_5",
+        "value": "Pièces et accessoires moto"
+    },
+    {
+        "key": "27_6",
+        "value": "Accessoires d'interieur"
+    },
+    {
+        "key": "28_1",
+        "value": "Outils"
+    },
+    {
+        "key": "28_2",
+        "value": "Eclairage d'interieur "
+    },
+    {
+        "key": "28_3",
+        "value": "Systèmes intelligents"
+    },
+    {
+        "key": "28_4",
+        "value": "Bricolage"
+    },
+    {
+        "key": "28_5",
+        "value": "Eclairage d'exterieur"
+    }
+]

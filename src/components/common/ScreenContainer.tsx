@@ -4,6 +4,7 @@ import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript
 // my importations
 import { colors } from '../../utils/constants'
 import Footer from './Footer'
+import Search from './Search'
 
 type COMPONENT_TYPE = {
     children: JSX.Element
@@ -16,13 +17,19 @@ const ScreenContainer: FC<COMPONENT_TYPE> = (props) => {
     const { children, navigation, onRefresh, refreshing } = props
 
     return (
-        <ScrollView contentContainerStyle={{ flexGrow: 1, backgroundColor: colors.bg_color }} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} showsVerticalScrollIndicator={false} >
-            <View style={styles.global_container}>
-                {children}
+        <>
+            {/* recherche */}
+            <Search />
+            <ScrollView contentContainerStyle={{ flexGrow: 1, backgroundColor: colors.bg_color }} refreshControl={<RefreshControl refreshing={refreshing} onRefresh={onRefresh} />} showsVerticalScrollIndicator={false} >
+                <View style={styles.global_container}>
 
-                <Footer navigation={navigation} />
-            </View>
-        </ScrollView>
+
+                    {children}
+
+                    <Footer navigation={navigation} />
+                </View>
+            </ScrollView>
+        </>
     )
 }
 

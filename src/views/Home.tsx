@@ -14,9 +14,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import CategoryPopularCard from '../components/cards/CategoryPopularCard'
 import MarchandCard from '../components/cards/MarchandCard'
 
-type COMPONENT_TYPE = {
-    navigation: DrawerNavigationHelpers,
-}
+type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, }
 
 const Home: FC<COMPONENT_TYPE> = (props) => {
     const { navigation } = props
@@ -37,6 +35,7 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
         refreshing ? <Loading /> :
             <ScreenContainer refreshing={refreshing} onRefresh={onRefresh} navigation={navigation}>
                 <View style={styles.home_container}>
+                    {/* marchand  certifié */}
                     <View style={styles.marchand_text_container}>
                         <Text style={styles.marchand_text_name}>Marchands Certifiés</Text>
                         <TouchableOpacity activeOpacity={0.5} style={styles.marchand_text_info_icon_container} onPress={() => setVisibleCertificated(true)}>
@@ -47,6 +46,7 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
 
                     <Slider navigation={navigation} />
 
+                    {/* marchand  vitepay */}
                     <View style={styles.marchand_text_container}>
                         <Text style={styles.marchand_text_name}>Marchands Vitepay</Text>
                         <TouchableOpacity activeOpacity={0.5} style={styles.marchand_text_info_icon_container} onPress={() => setVisibleVitepay(true)}>
@@ -57,6 +57,7 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
 
                     <Slider navigation={navigation} />
 
+                    {/* catégorie  populaire */}
                     <View style={styles.categories_populaires_title_container}>
                         <Text style={styles.categories_populaires_title}>Catégories Populaires</Text>
 
@@ -70,6 +71,7 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
                         />
                     </View>
 
+                    {/* liste marchand */}
                     <View style={styles.list_marchand_container}>
                         <MarchandCard navigation={navigation} />
                         <MarchandCard navigation={navigation} />

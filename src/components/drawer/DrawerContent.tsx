@@ -3,15 +3,15 @@ import React, { FC } from 'react'
 import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript/src/types'
 
 // my importations
-import { categories, colors } from '../../utils/constants'
+import { colors } from '../../utils/constants'
 import CategoryCard from '../cards/CategoryCard'
+import categories from '../../utils/json/categories.json'
 
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
 type COMPONENT_TYPE = {
     navigation: DrawerNavigationHelpers,
-    // screenName: string
 }
 
 const DrawerCustomer: FC<COMPONENT_TYPE> = (props) => {
@@ -28,7 +28,7 @@ const DrawerCustomer: FC<COMPONENT_TYPE> = (props) => {
                 <TouchableOpacity activeOpacity={0.5} style={styles.menu} onPress={() => navigation.navigate('home')}>
                     <Text style={styles.menu_name}>Accueil</Text>
                 </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.menu} onPress={() => navigation.navigate('home')}>
+                <TouchableOpacity activeOpacity={0.5} style={styles.menu} onPress={() => navigation.navigate('categorie', { key: '1', value: 'Alimentation' })}>
                     <Text style={styles.menu_name}>Catégories</Text>
                 </TouchableOpacity>
             </View>
@@ -36,7 +36,7 @@ const DrawerCustomer: FC<COMPONENT_TYPE> = (props) => {
             <FlatList
                 data={categories}
                 renderItem={({ item }) => <CategoryCard data={item} navigation={navigation} />}
-                keyExtractor={item => item.id}
+                keyExtractor={item => item.key}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={styles.sub_menu_container}
             />

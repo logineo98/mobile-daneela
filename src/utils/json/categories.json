@@ -1,0 +1,114 @@
+[
+    {
+        "key": "1",
+        "value": "Alimentation"
+    },
+    {
+        "key": "2",
+        "value": "Fashion"
+    },
+    {
+        "key": "3",
+        "value": "Cosmétique"
+    },
+    {
+        "key": "4",
+        "value": "Hôtel/Auberge"
+    },
+    {
+        "key": "5",
+        "value": "Électronique"
+    },
+    {
+        "key": "6",
+        "value": "Billetterie"
+    },
+    {
+        "key": "7",
+        "value": "Immobilier/Déco"
+    },
+    {
+        "key": "8",
+        "value": "Jeu"
+    },
+    {
+        "key": "9",
+        "value": "Sport"
+    },
+    {
+        "key": "10",
+        "value": "Supermarché"
+    },
+    {
+        "key": "11",
+        "value": "Restaurations"
+    },
+    {
+        "key": "12",
+        "value": "Médecine"
+    },
+    {
+        "key": "13",
+        "value": "Quincaillerie"
+    },
+    {
+        "key": "14",
+        "value": "Véhicule"
+    },
+    {
+        "key": "15",
+        "value": "Internet"
+    },
+    {
+        "key": "16",
+        "value": "Itech"
+    },
+    {
+        "key": "17",
+        "value": "Musique"
+    },
+    {
+        "key": "18",
+        "value": "Elearning"
+    },
+    {
+        "key": "19",
+        "value": "Agriculture"
+    },
+    {
+        "key": "20",
+        "value": "Expédition"
+    },
+    {
+        "key": "21",
+        "value": "Mode Femme"
+    },
+    {
+        "key": "22",
+        "value": "Mode Homme"
+    },
+    {
+        "key": "23",
+        "value": "Bijoux et montres"
+    },
+    {
+        "key": "24",
+        "value": "Sacs et Chaussures"
+    },
+    {
+        "key": "25",
+        "value": "Jouets et Enfants"
+    },
+    {
+        "key": "26",
+        "value": "Beauté, santé et cheveux"
+    },
+    {
+        "key": "27",
+        "value": "Autos et Motos"
+    },
+    {
+        "key": "28",
+        "value": "Outils et bricolage"
+    }
+]

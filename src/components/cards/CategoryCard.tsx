@@ -7,18 +7,18 @@ import { colors } from '../../utils/constants'
 
 type COMPONENT_TYPE = {
     data: {
-        id: string,
-        name: string,
+        key: string,
+        value: string,
     },
-    navigation?: DrawerNavigationHelpers,
+    navigation: DrawerNavigationHelpers,
 }
 const CategoryCard: FC<COMPONENT_TYPE> = (props) => {
     const { data, navigation } = props
-    const { id, name } = data
+    const { key, value } = data
 
     return (
-        <TouchableOpacity activeOpacity={0.5} style={styles.sub_menu} onPress={() => navigation?.navigate('home')}>
-            <Text style={styles.sub_menu_name}> {name} </Text>
+        <TouchableOpacity activeOpacity={0.5} style={styles.sub_menu} onPress={() => navigation.navigate('categorie', data)}>
+            <Text style={styles.sub_menu_name}> {value} </Text>
         </TouchableOpacity>
     )
 }
