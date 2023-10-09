@@ -1,4 +1,4 @@
-import { FlatList, Image, Modal, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { FC, useCallback, useState } from 'react'
 import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript/src/types'
 // my importations
@@ -12,6 +12,7 @@ import { categories_populaires } from '../utils/json/categorie_populaire.json'
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import CategoryPopularCard from '../components/cards/CategoryPopularCard'
+import MarchandCard from '../components/cards/MarchandCard'
 
 type COMPONENT_TYPE = {
     navigation: DrawerNavigationHelpers,
@@ -69,7 +70,12 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
                         />
                     </View>
 
-
+                    <View style={styles.list_marchand_container}>
+                        <MarchandCard navigation={navigation} />
+                        <MarchandCard navigation={navigation} />
+                        <MarchandCard navigation={navigation} />
+                        <MarchandCard navigation={navigation} />
+                    </View>
                 </View>
             </ScreenContainer>
     )
@@ -88,6 +94,9 @@ const styles = StyleSheet.create({
     categories_populaires_title_container: {},
     categories_populaires_title: { color: colors.black, fontSize: 20, fontWeight: '600', },
     categories_populaires_container: { marginVertical: 10, alignItems: 'center', },
+
+    // list marchand
+    list_marchand_container: { flexDirection: 'row', flexWrap: 'wrap', },
 })
 
 export default Home
