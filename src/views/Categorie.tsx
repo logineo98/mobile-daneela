@@ -10,6 +10,7 @@ import { colors, images } from '../utils/constants'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import FilterItemSelectedCard from '../components/cards/FilterItemSelectedCard'
 import MarchandCard from '../components/cards/MarchandCard'
+import Filter from '../components/common/Filter'
 
 type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, }
 type DATA_TYPE = { key: string, value: string }
@@ -19,7 +20,7 @@ const Categorie: FC<COMPONENT_TYPE> = (props) => {
     const route = useRoute()
 
     const data = route?.params as DATA_TYPE
-
+    console.log('Categorie View', data)
     const [refreshing, setRefreshing] = useState(false)
 
     const onRefresh = useCallback(() => {
@@ -40,6 +41,8 @@ const Categorie: FC<COMPONENT_TYPE> = (props) => {
                         <MaterialIcons name='filter-alt' color={colors.white} size={18} />
                         <Text style={styles.filter_name}>CLIQUER POUR FILTRER</Text>
                     </TouchableOpacity>
+
+                    <Filter data={data} />
 
                     {/* effacer et les elements du fitre selectionné */}
                     <View style={styles.erease_selected_item_filter_container}>
