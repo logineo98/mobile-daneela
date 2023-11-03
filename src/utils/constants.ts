@@ -11,6 +11,8 @@ export const images = {
     restauration: require('../assets/images/restauration.jpg'),
     supermarche: require('../assets/images/supermarche.jpg'),
     erease_filter: require('../assets/images/erease_filter.png'),
+    fleche_haut: require('../assets/images/fleche_haut.png'),
+    fleche_bas: require('../assets/images/fleche_bas.png'),
 
 }
 
@@ -26,6 +28,10 @@ export const colors = {
     facebook_color: '#077AE9',
     instagram_color: '#DC4D5A',
     linkedin_color: '#0274B3',
+
+    success: '#00CC8D',
+    error: '#e23636',
+    warning: '#edb95e',
 }
 
 export const categories = [

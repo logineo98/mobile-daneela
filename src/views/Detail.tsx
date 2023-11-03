@@ -11,12 +11,10 @@ import Fontisto from 'react-native-vector-icons/Fontisto'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 
-type COMPONENT_TYPE = {
-    navigation: DrawerNavigationHelpers,
-}
+type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, screenName: string }
 
 const Detail: FC<COMPONENT_TYPE> = (props) => {
-    const { navigation } = props
+    const { navigation, screenName } = props
 
     const init_menu = { apercu: true, avis: false, proposition: false, about: false }
 
@@ -41,7 +39,7 @@ const Detail: FC<COMPONENT_TYPE> = (props) => {
 
     return (
         refreshing ? <Loading /> :
-            <ScreenContainer refreshing={refreshing} onRefresh={onRefresh} navigation={navigation}>
+            <ScreenContainer refreshing={refreshing} onRefresh={onRefresh} screenName={screenName} navigation={navigation}>
                 <View style={styles.detail_container}>
                     <View style={styles.detail}>
                         {/* the 3 images background, featured and vitepay */}

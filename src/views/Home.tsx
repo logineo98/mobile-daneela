@@ -14,10 +14,10 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import CategoryPopularCard from '../components/cards/CategoryPopularCard'
 import MarchandCard from '../components/cards/MarchandCard'
 
-type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, }
+type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, screenName: string }
 
 const Home: FC<COMPONENT_TYPE> = (props) => {
-    const { navigation } = props
+    const { navigation, screenName } = props
 
     const [refreshing, setRefreshing] = useState(false)
     const [visibleCertificated, setVisibleCertificated] = useState(false)
@@ -33,7 +33,7 @@ const Home: FC<COMPONENT_TYPE> = (props) => {
 
     return (
         refreshing ? <Loading /> :
-            <ScreenContainer refreshing={refreshing} onRefresh={onRefresh} navigation={navigation}>
+            <ScreenContainer refreshing={refreshing} onRefresh={onRefresh} screenName={screenName} navigation={navigation}>
                 <View style={styles.home_container}>
                     {/* marchand  certifié */}
                     <View style={styles.marchand_text_container}>

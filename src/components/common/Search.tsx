@@ -1,61 +1,93 @@
-import { StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
-import React, { useEffect, useState } from 'react'
-import { SelectList } from 'react-native-dropdown-select-list'
+import { StyleSheet, ToastAndroid, TouchableOpacity, View, useWindowDimensions } from 'react-native'
+import React, { FC, useEffect, useState } from 'react'
+import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript/src/types'
+import { useDispatch, useSelector } from 'react-redux'
 // my importations
 import { colors } from '../../utils/constants'
+import Dropdown from '../others/dropdown/Dropdown'
+import { _search } from '../../redux/actions/search.action'
+import { ROOT_REDUCER_TYPE } from '../../redux/store'
+// my json
 import { search_by } from '../../utils/json/recherche.json'
 import categories from '../../utils/json/categories.json'
 import sub_categories from '../../utils/json/sub_categories.json'
+import marchands from '../../utils/json/marchands.json'
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
-const Search = () => {
+
+type ITEM_TYPE = { key: string, value: string }
+type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, screenName: string }
+
+const Search: FC<COMPONENT_TYPE> = (props) => {
+    const { navigation, screenName } = props
 
     const { height, width } = useWindowDimensions()
 
-    const [selected, setSelected] = useState('')
-    const [selectSearchBy, setSelectSearchBy] = useState('')
-    const [dataToSearch, setDataToSearch] = useState<any[]>()
+    const { first_search, second_search } = useSelector((state: ROOT_REDUCER_TYPE) => state.search)
+    const dispatch = useDispatch<any>()
+
+    const [selectSearchBy, setSelectSearchBy] = useState<ITEM_TYPE>()
+    const [selected, setSelected] = useState<ITEM_TYPE>()
+    const [dataToSearch, setDataToSearch] = useState<ITEM_TYPE[]>([])
+
+    const handleSearch = async () => {
+        if (!selected) ToastAndroid.showWithGravity('Veuillez choisir un élément dans recherche.', ToastAndroid.CENTER, ToastAndroid.TOP)
+        else {
+            dispatch(_search({ first_search: selectSearchBy as ITEM_TYPE, second_search: selected }, navigation))
+        }
+    }
 
     useEffect(() => {
-        if (selectSearchBy === '1') setDataToSearch(sub_categories)
-        else if (selectSearchBy === '2') setDataToSearch(categories)
-        else if (selectSearchBy === '3') setDataToSearch([])
+        if (selectSearchBy?.key === '1') setDataToSearch(sub_categories)
+        else if (selectSearchBy?.key === '2') setDataToSearch(categories)
+        else if (selectSearchBy?.key === '3') setDataToSearch(marchands)
+        else setDataToSearch([]);
+
+        setSelected(undefined)
     }, [selectSearchBy])
+
+    useEffect(() => {
+        if (screenName !== 'politique_utilisation') {
+            if (first_search) setSelectSearchBy(first_search)
+            if (second_search) setSelected(second_search)
+        }
+    }, [screenName])
+
+
+    console.log('selectSearchBy', selectSearchBy)
 
     return (
         <View style={styles.search_global_container}>
             <View style={styles.search_container}>
-                <SelectList
-                    onSelect={() => { }}
-                    setSelected={setSelectSearchBy}
+                <Dropdown
                     data={search_by}
-                    defaultOption={{ key: '1', value: 'Article' }}
-                    placeholder='Rechercher par : '
-                    inputStyles={{ color: colors.black, }}
-                    dropdownTextStyles={{ color: colors.black, }}
-                    boxStyles={{ borderRadius: 0, borderWidth: 0.5, borderBottomWidth: 0, }}
-                    dropdownStyles={{ marginTop: 0, borderRadius: 0, borderWidth: 0.5, }}
-                    search={false}
+                    setValue={setSelectSearchBy}
+                    value={selectSearchBy}
+                    defaultValue={first_search ? first_search : { key: '1', value: 'Article' }}
+
+                    itemSelectedContainerStyle={{ height: 45, padding: 11, borderWidth: 0.5, borderRadius: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, }}
+                    dropDownContainerStyle={{ borderWidth: 0.5, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, }}
                 />
 
                 <View style={styles.search_submit_container}>
-                    <SelectList
-                        onSelect={() => console.log(selected)}
-                        setSelected={setSelected}
-                        data={selectSearchBy === '1' ? sub_categories : selectSearchBy === '2' ? categories : []}
-                        placeholder='Rechercher'
-                        searchPlaceholder='Rechercher'
-                        notFoundText='Aucune donnée trouvée'
-                        boxStyles={{ borderRadius: 0, width: (width - (40 + 40)), backgroundColor: 'rgba(0,0,0,0.4)', borderWidth: 0, }}
-                        inputStyles={{ color: colors.white, }}
-                        dropdownStyles={{ marginTop: 0, borderRadius: 0, borderWidth: 0.5, }}
-                        dropdownTextStyles={{ color: colors.black, fontSize: 12, }}
-                        arrowicon={<MaterialIcons name='keyboard-arrow-down' color={colors.white} size={18} style={styles.search_submit_icon} />}
-                        searchicon={<MaterialIcons name='search' color={colors.white} size={18} style={styles.search_submit_icon} />}
-                        closeicon={<MaterialIcons name='close' color={colors.white} size={18} style={styles.search_submit_icon} />}
+                    <Dropdown
+                        data={dataToSearch}
+                        setValue={setSelected}
+                        value={selected}
+                        defaultValue={second_search ? second_search : undefined}
+
+                        searchable={true}
+                        searchPlaceholder='Recherche...'
+                        searchPlaceholderTextColor={colors.light_gray}
+
+                        style={{ width: (width - (40 + 40)), }}
+                        itemSelectedContainerStyle={{ backgroundColor: 'rgba(0,0,0,0.4)', height: 45, padding: 11, borderWidth: 0.5, borderRadius: 0, borderTopLeftRadius: 0, borderTopRightRadius: 0, }}
+                        itemSelectedStyle={{ color: colors.white, }}
+                        searchInputStyle={{}}
+                        dropDownContainerStyle={{ borderWidth: 0.5, borderBottomLeftRadius: 0, borderBottomRightRadius: 0, }}
                     />
-                    <TouchableOpacity activeOpacity={0.5} style={styles.search_submit_icon_container}>
+                    <TouchableOpacity activeOpacity={0.5} onPress={handleSearch} style={styles.search_submit_icon_container}>
                         <MaterialIcons name='search' color={colors.white} size={25} style={styles.search_submit_icon} />
                     </TouchableOpacity>
                 </View>
@@ -69,7 +101,7 @@ const styles = StyleSheet.create({
     search_container: { padding: 10, paddingBottom: 0, },
 
     search_submit_container: { flexDirection: 'row', },
-    search_submit_icon_container: { backgroundColor: colors.tomato, width: 40, height: 45, alignItems: 'center', justifyContent: 'center' },
+    search_submit_icon_container: { backgroundColor: colors.tomato, width: 40, height: 45, alignItems: 'center', justifyContent: 'center', borderWidth: 0.5, },
     search_submit_icon: {},
 })
 
