@@ -184,7 +184,7 @@ const styles = StyleSheet.create({
     close_filter: { width: 95, paddingVertical: 6, borderRadius: 5, alignItems: 'center', },
     close_filter_name: { color: colors.white, },
 
-    filter_container: { backgroundColor: colors.bg_color, height: '85%', padding: 10, borderRadius: 5, },
+    filter_container: { backgroundColor: colors.bg_color, height: '90%', padding: 10, borderRadius: 5, },
 
     filter_element_title_container: { backgroundColor: colors.white, borderRadius: 5, padding: 10, marginBottom: 10, },
     filter_element_title: { color: colors.black, fontSize: 18, fontWeight: '600', borderBottomWidth: 1, borderBottomColor: colors.light_gray, },

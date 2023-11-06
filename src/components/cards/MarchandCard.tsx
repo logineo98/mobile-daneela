@@ -6,16 +6,17 @@ import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript
 import { colors, images } from '../../utils/constants'
 
 type COMPONENT_TYPE = {
-    navigation: DrawerNavigationHelpers,
+    navigation: DrawerNavigationHelpers
+    slider?: boolean
 }
 
 const MarchandCard: FC<COMPONENT_TYPE> = (props) => {
-    const { navigation } = props
+    const { navigation, slider } = props
 
     const { height, width } = useWindowDimensions()
 
     return (
-        <TouchableOpacity activeOpacity={0.5} style={[styles.marchand_container, { width: width < 640 ? (width - 20) : (width / 2) - 20, marginRight: 10 }]} onPress={() => navigation.navigate('detail')}>
+        <TouchableOpacity activeOpacity={0.5} style={[styles.marchand_container, { width: width < 640 ? (width - 20) : (width / 2) - 20, marginRight: (slider && width < 640) ? 0 : 10 }]} onPress={() => navigation.navigate('detail')}>
             <Image source={images.arriere} style={styles.image_arriere} />
 
             <View style={styles.image_avant_info_container}>
