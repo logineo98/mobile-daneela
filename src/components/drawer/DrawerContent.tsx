@@ -1,18 +1,14 @@
 import { FlatList, StyleSheet, Text, TouchableOpacity, View, useWindowDimensions } from 'react-native'
 import React, { FC } from 'react'
 import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript/src/types'
-
 // my importations
 import { colors } from '../../utils/constants'
 import CategoryCard from '../cards/CategoryCard'
 import categories from '../../utils/json/categories.json'
-
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
-type COMPONENT_TYPE = {
-    navigation: DrawerNavigationHelpers,
-}
+type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, }
 
 const DrawerCustomer: FC<COMPONENT_TYPE> = (props) => {
     const { navigation } = props
@@ -28,7 +24,7 @@ const DrawerCustomer: FC<COMPONENT_TYPE> = (props) => {
                 <TouchableOpacity activeOpacity={0.5} style={styles.menu} onPress={() => navigation.navigate('home')}>
                     <Text style={styles.menu_name}>Accueil</Text>
                 </TouchableOpacity>
-                <TouchableOpacity activeOpacity={0.5} style={styles.menu} onPress={() => navigation.navigate('categorie', { key: '1', value: 'Alimentation' })}>
+                <TouchableOpacity activeOpacity={0.5} style={styles.menu} onPress={() => navigation.navigate('categorie', { key: '1', value: 'Alimentation', marchand_: false })}>
                     <Text style={styles.menu_name}>Catégories</Text>
                 </TouchableOpacity>
             </View>

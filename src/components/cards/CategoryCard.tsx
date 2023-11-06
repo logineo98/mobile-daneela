@@ -17,8 +17,8 @@ const CategoryCard: FC<COMPONENT_TYPE> = (props) => {
     const { key, value } = data
 
     return (
-        <TouchableOpacity activeOpacity={0.5} style={styles.sub_menu} onPress={() => navigation.navigate('categorie', data)}>
-            <Text style={styles.sub_menu_name}> {value} </Text>
+        <TouchableOpacity activeOpacity={0.5} style={styles.sub_menu} onPress={() => navigation.navigate('categorie', { ...data, marchand_: false })}>
+            <Text style={styles.sub_menu_name}>{value}</Text>
         </TouchableOpacity>
     )
 }

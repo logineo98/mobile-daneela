@@ -8,8 +8,6 @@ import FilterTypeArticleCard from '../cards/FilterTypeArticleCard'
 import categories from '../../utils/json/categories_subcategories.json'
 import regions from '../../utils/json/region.json'
 import { mins, maxs } from '../../utils/json/min_max.json'
-// my icons
-import AntDesign from 'react-native-vector-icons/AntDesign'
 
 type DATA_TYPE = { key: string, value: string, marchand_?: boolean }
 type COMPONENT_TYPE = {

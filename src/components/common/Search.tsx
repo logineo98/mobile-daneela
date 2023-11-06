@@ -54,9 +54,6 @@ const Search: FC<COMPONENT_TYPE> = (props) => {
         }
     }, [screenName])
 
-
-    console.log('selectSearchBy', selectSearchBy)
-
     return (
         <View style={styles.search_global_container}>
             <View style={styles.search_container}>

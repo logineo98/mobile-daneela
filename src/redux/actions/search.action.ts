@@ -15,7 +15,7 @@ export const _search = (data: SEARCH_DATA_TYPE, navigation: DrawerNavigationHelp
     }
 }
 
-export const _first_search = (data: SEARCH_ITEM_TYPE) => (dispatch: any) => {
+export const _first_search = (data?: SEARCH_ITEM_TYPE) => (dispatch: any) => {
     try {
 
         dispatch({ type: FIRST_SEARCH, payload: data })
@@ -24,7 +24,7 @@ export const _first_search = (data: SEARCH_ITEM_TYPE) => (dispatch: any) => {
     }
 }
 
-export const _second_search = (data: SEARCH_ITEM_TYPE) => (dispatch: any) => {
+export const _second_search = (data?: SEARCH_ITEM_TYPE) => (dispatch: any) => {
     try {
 
         dispatch({ type: SECOND_SEARCH, payload: data })

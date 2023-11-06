@@ -5,11 +5,13 @@ import { DrawerNavigationHelpers } from '@react-navigation/drawer/lib/typescript
 import ScreenContainer from '../components/common/ScreenContainer'
 import { colors, images } from '../utils/constants'
 import Loading from '../components/common/Loading'
+import { Rating } from 'react-native-ratings'
 // my icons
 import Feather from 'react-native-vector-icons/Feather'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 type COMPONENT_TYPE = { navigation: DrawerNavigationHelpers, screenName: string }
 
@@ -65,6 +67,7 @@ const Detail: FC<COMPONENT_TYPE> = (props) => {
                             </View>
                             <Text style={styles.info_title}>Zone d'affaire</Text>
                             <Text style={styles.info_adresse}>Kalaban Koura</Text>
+                            <Rating imageSize={16} ratingCount={5} startingValue={4} readonly style={styles.info_rating} />
                         </View>
 
                         {/* menus */}
@@ -121,7 +124,43 @@ const Detail: FC<COMPONENT_TYPE> = (props) => {
 
                                 {menu.avis &&
                                     <View style={styles.menu_content_avis}>
-
+                                        {/* info avis et bouton se connecter avec facebook */}
+                                        <View style={styles.avis_give_a_note_container}>
+                                            <FontAwesome5 name='user-circle' color={colors.black} size={40} />
+                                            <Text style={styles.avis_text_gras}>Donner une note</Text>
+                                            <Text style={styles.avis_text_light}>Partager votre expérience afin d'aider les autres utilisateur</Text>
+                                            <Rating imageSize={25} ratingCount={5} startingValue={4} readonly style={styles.info_rating} />
+                                            <TouchableOpacity activeOpacity={0.5} style={styles.avis_login_fb_container}>
+                                                <Text style={styles.avis_login_fb_text}>Se connecter avec facebook</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                        {/* statisque des avis */}
+                                        <View style={styles.avis_statistique_container}>
+                                            <Text style={styles.avis_statistique_title}>Résumé des notes clients</Text>
+                                            <View style={styles.avis_stat_horiz_note_rating_container}>
+                                                <View style={styles.avis_stat_horiz_container}>
+                                                    {[5, 4, 3, 2, 1].map(value => (
+                                                        <View style={styles.avis_stat_horiz_content} key={value}>
+                                                            <Text style={styles.avis_stat_horiz_content_title}>{value}</Text>
+                                                            <View style={styles.avis_stat_horiz_content_value} />
+                                                        </View>
+                                                    ))}
+                                                </View>
+                                                <View style={styles.avis_note_rating_container}>
+                                                    <Text style={styles.avis_note}>0.0</Text>
+                                                    <Rating imageSize={16} ratingCount={5} startingValue={4} readonly style={styles.info_rating} />
+                                                </View>
+                                            </View>
+                                        </View>
+                                        {/* commentaires et avis */}
+                                        <View style={styles.avis_commentaire_container}>
+                                            <View style={styles.avis_commentaire_header_container}>
+                                                <Text style={styles.avis_commentaire_header_title}>Commentaires et avis</Text>
+                                                <TouchableOpacity activeOpacity={0.5} style={styles.avis_commentaire_header_btn_container}>
+                                                    <Text style={styles.avis_commentaire_header_btn_name}>Donner votre avis</Text>
+                                                </TouchableOpacity>
+                                            </View>
+                                        </View>
                                     </View>
                                 }
 
@@ -240,6 +279,7 @@ const styles = StyleSheet.create({
     info_name: { color: colors.light_gray, marginLeft: 5, },
     info_title: { color: colors.black, fontWeight: '600', fontSize: 20, textAlign: 'justify', marginVertical: 10, },
     info_adresse: { color: colors.black, textAlign: 'justify', marginBottom: 10, },
+    info_rating: {},
 
     menu_container: {},
     menu_name_container: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', borderBottomWidth: 1, borderBottomColor: colors.light_gray, marginTop: 10, },
@@ -250,7 +290,7 @@ const styles = StyleSheet.create({
     menu_content_container: {},
     // aperçu
     menu_content_apercu: {},
-    phone_web_site_container: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', borderBottomWidth: 1, borderBottomColor: colors.light_gray, paddingVertical: 15, },
+    phone_web_site_container: { paddingVertical: 15, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', borderBottomWidth: 1, borderBottomColor: colors.light_gray, },
     icon_name_container: { alignItems: 'center', },
     phone_web_site_icon: {},
     phone_web_site_name: { color: colors.black, },
@@ -261,6 +301,27 @@ const styles = StyleSheet.create({
     featured_product_image: { height: '100%', width: '100%', resizeMode: 'cover', },
     // avis
     menu_content_avis: {},
+    avis_give_a_note_container: { padding: 10, alignItems: 'center', borderBottomWidth: 1, borderBottomColor: colors.light_gray, },
+    avis_text_gras: { color: colors.black, fontWeight: '600', },
+    avis_text_light: { color: colors.light_gray, fontSize: 12, textAlign: 'center', marginBottom: 15, },
+    avis_login_fb_container: { backgroundColor: colors.facebook_color, marginTop: 5, },
+    avis_login_fb_text: { color: colors.white, textTransform: 'uppercase', padding: 10, },
+
+    avis_statistique_container: { padding: 10, borderBottomWidth: 1, borderBottomColor: colors.light_gray, },
+    avis_statistique_title: { color: colors.black, marginBottom: 10, },
+    avis_stat_horiz_note_rating_container: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', },
+    avis_stat_horiz_container: { width: '65%', },
+    avis_stat_horiz_content: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', },
+    avis_stat_horiz_content_title: { width: 10, color: colors.main_black, },
+    avis_stat_horiz_content_value: { height: 10, width: '92%', backgroundColor: colors.light_gray, borderRadius: 10, },
+    avis_note_rating_container: { alignItems: 'center', },
+    avis_note: { color: colors.black, fontSize: 30, },
+
+    avis_commentaire_container: { padding: 10, },
+    avis_commentaire_header_container: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', },
+    avis_commentaire_header_title: { color: colors.black, },
+    avis_commentaire_header_btn_container: { borderWidth: 1, borderColor: colors.light_gray, borderRadius: 5, },
+    avis_commentaire_header_btn_name: { color: colors.black, paddingHorizontal: 10, paddingVertical: 3, },
     // proposition
     menu_content_proposition: { padding: 10, },
     proposition_content_title_container: {},
@@ -272,7 +333,7 @@ const styles = StyleSheet.create({
     proposition_content_categorie: { backgroundColor: colors.tomato, color: colors.white, fontSize: 13, paddingVertical: 5, paddingHorizontal: 10, borderRadius: 15, marginRight: 5, marginBottom: 5, },
     // about
     menu_content_about: {},
-    about_content_icon_info_container: { borderBottomWidth: 1, borderBottomColor: colors.light_gray, padding: 10, paddingBottom: 5, },
+    about_content_icon_info_container: { padding: 10, paddingBottom: 5, borderBottomWidth: 1, borderBottomColor: colors.light_gray, },
     about_content_icon_info: { flexDirection: 'row', alignItems: 'center', marginBottom: 10, },
     about_content_icon: {},
     about_content_info: { marginLeft: 5, color: colors.black, fontSize: 13, },

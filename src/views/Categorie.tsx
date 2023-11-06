@@ -9,6 +9,7 @@ import { colors, images } from '../utils/constants'
 import FilterItemSelectedCard from '../components/cards/FilterItemSelectedCard'
 import MarchandCard from '../components/cards/MarchandCard'
 import Filter from '../components/common/Filter'
+import { _first_search, _second_search } from '../redux/actions/search.action'
 // my icons
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 
